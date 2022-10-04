@@ -2,8 +2,9 @@
 using PdfSharp.Pdf.IO;
 using PdfSharp.Pdf.Security;
 using System.Reflection.PortableExecutable;
+// PDFsharp is published under the MIT/LGPL License
 
-    FileSystemWatcher watcher = new FileSystemWatcher();
+FileSystemWatcher watcher = new FileSystemWatcher();
     watcher.Path = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + @"\documents\";
     watcher.Filter = "*.pdf";
     watcher.IncludeSubdirectories = true;
