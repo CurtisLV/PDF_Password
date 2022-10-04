@@ -13,6 +13,7 @@ using System.Reflection.PortableExecutable;
 
 static void fw_Created(object sender, FileSystemEventArgs e)
 {
+    System.Text.Encoding.RegisterProvider(System.Text.CodePagesEncodingProvider.Instance);
     string path = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + @"\documents";
     PdfDocument document = PdfReader.Open(path + "\\" + e.Name, "");
 
@@ -20,21 +21,21 @@ static void fw_Created(object sender, FileSystemEventArgs e)
 
     // Setting one of the passwords automatically sets the security level to 
     // PdfDocumentSecurityLevel.Encrypted128Bit.
-    //securitySettings.UserPassword = "yourUserPassword";
-    securitySettings.OwnerPassword = "abc123";
+    securitySettings.UserPassword = "abc123";
+    //securitySettings.OwnerPassword = "abc123";
 
     // Don't use 40 bit encryption unless needed for compatibility reasons
     //securitySettings.DocumentSecurityLevel = PdfDocumentSecurityLevel.Encrypted40Bit;
 
     // Restrict some rights.
-    securitySettings.PermitAccessibilityExtractContent = false;
-    securitySettings.PermitAnnotations = false;
-    securitySettings.PermitAssembleDocument = false;
-    securitySettings.PermitExtractContent = false;
-    securitySettings.PermitFormsFill = false;
-    securitySettings.PermitFullQualityPrint = false;
-    securitySettings.PermitModifyDocument = false;
-    securitySettings.PermitPrint = false;
+    //securitySettings.PermitAccessibilityExtractContent = false;
+    //securitySettings.PermitAnnotations = false;
+    //securitySettings.PermitAssembleDocument = false;
+    //securitySettings.PermitExtractContent = false;
+    //securitySettings.PermitFormsFill = false;
+    //securitySettings.PermitFullQualityPrint = false;
+    //securitySettings.PermitModifyDocument = false;
+    //securitySettings.PermitPrint = true;
 
     // Save the document...
     document.Save(path + "\\" + e.Name);
