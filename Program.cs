@@ -27,22 +27,6 @@ static void fw_Created(object sender, FileSystemEventArgs e)
         Console.WriteLine($"Password applied: {e.Name}");
     }
     
-    //securitySettings.OwnerPassword = "abc123";
-
-    // Don't use 40 bit encryption unless needed for compatibility reasons
-    //securitySettings.DocumentSecurityLevel = PdfDocumentSecurityLevel.Encrypted40Bit;
-
-    // Restrict some rights.
-    //securitySettings.PermitAccessibilityExtractContent = false;
-    //securitySettings.PermitAnnotations = false;
-    //securitySettings.PermitAssembleDocument = false;
-    //securitySettings.PermitExtractContent = false;
-    //securitySettings.PermitFormsFill = false;
-    //securitySettings.PermitFullQualityPrint = false;
-    //securitySettings.PermitModifyDocument = false;
-    //securitySettings.PermitPrint = true;
-
-
 }
 
 
