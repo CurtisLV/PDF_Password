@@ -1,6 +1,7 @@
 ﻿using PdfSharp.Pdf;
 using PdfSharp.Pdf.IO;
 using PdfSharp.Pdf.Security;
+using System.IO;
 using System.Reflection.PortableExecutable;
 // PDFsharp is published under the MIT/LGPL License
 
@@ -28,5 +29,14 @@ static void fw_Created(object sender, FileSystemEventArgs e)
     }
     
 }
+
+// --- MVP1 ---
+// Create GUI 
+// Add ability to add folder name
+// Add ability to add password 
+
+// --- MVP2 ---
+// Drop file and get filename automatically
+// Get passwords from file and show in window 
 
 
